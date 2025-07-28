@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="styles.css" />
+		<script src="./script.js" defer></script>
+
+		<title>Etch-a-Sketch</title>
+	</head>
+	<body>
+		<header>
+			<h1 class="title">Welcome to Etch-a-Sketch</h1>
+			<div class="input-section">
+				<form action="">
+					<input
+						type="number"
+						id="canvas-size-input"
+						min="0"
+						max="100"
+						required
+					/>
+					<button type="submit" id="submit-canvas-size">Generate Canvas</button>
+				</form>
+			</div>
+		</header>
+		<div class="canvas">
+			<div class="canvas-block"></div>
+			<div class="canvas-block"></div>
+			<div class="canvas-block"></div>
+			<div class="canvas-block"></div>
+			<div class="canvas-block"></div>
+			<div class="canvas-block"></div>
+			<div class="canvas-block"></div>
+			<div class="canvas-block"></div>
+		</div>
+	</body>
+</html>
