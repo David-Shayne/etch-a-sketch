@@ -38,7 +38,3 @@ h1.title {
 	flex-wrap: wrap;
 	align-content: start;
 }
-
-.canvas-block {
-	border: 1px solid black;
-}
