@@ -41,13 +41,25 @@ h1.title {
 
 #canvas-size-input {
 	min-width: 5rem;
-	padding: 0.05rem 0.25rem;
+	padding: 0.25rem 0.25rem;
+	font-size: 0.75rem;
+	max-width: 150px;
 }
 
 #submit-canvas-size {
-	padding: 0.1rem 1rem;
+	font-size: 0.85rem;
+	padding: 0.25rem 1rem;
 	margin-left: 0.25rem;
 	min-width: 200px;
+	background-color: rgb(112, 255, 143);
+	border: none;
+	border-radius: 5px;
+
+	&:hover,
+	&:focus {
+		background-color: rgb(48, 173, 75);
+		color: white;
+	}
 }
 
 #canvas {
@@ -55,7 +67,7 @@ h1.title {
 	min-width: 450px;
 	max-width: 99vw;
 	height: 70vh;
-	border: 3px solid rgb(107, 107, 107);
+	border: 2px dashed rgb(107, 107, 107);
 	margin: 3vh auto;
 	display: flex;
 	flex-wrap: wrap;

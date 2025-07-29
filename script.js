@@ -1,6 +1,5 @@
 const sizeInputBtnEle = document.getElementById("submit-canvas-size");
 const sizeInputEle = document.getElementById("canvas-size-input");
-sizeInputEle.value = 10;
 const canvasEle = document.createElement("div");
 canvasEle.id = "canvas";
 
