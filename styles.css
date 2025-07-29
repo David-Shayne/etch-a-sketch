@@ -29,8 +29,8 @@ h1.title {
 	margin-left: 0.25rem;
 }
 
-.canvas {
-	width: 80vw;
+#canvas {
+	width: 80vh;
 	height: 80vh;
 	border: 3px solid rgb(107, 107, 107);
 	margin: 0.5rem auto;
