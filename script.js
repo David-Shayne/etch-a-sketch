@@ -4,9 +4,16 @@ sizeInputEle.value = 10;
 const canvasEle = document.createElement("div");
 canvasEle.id = "canvas";
 
+//Populates the canvas equally with blocks
 function populateCanvas(e) {
 	//Stop submit default function
 	e.preventDefault();
+
+	//Stop additional generations
+	if (canvasEle.childElementCount > 0) {
+		return;
+	}
+
 	let input = e.target.previousElementSibling.value;
 	let totalBlockNum = input * input;
 	let blockWAndHPerc = 1 / input;
@@ -27,7 +34,13 @@ function populateCanvas(e) {
 	document.body.append(canvasEle);
 }
 
+function paintBlock(e) {
+	let currentShade = e.target.style.backgroundColor;
+	console.log(currentShade);
+}
+
 sizeInputBtnEle.addEventListener("click", populateCanvas);
+canvasEle.addEventListener("click", (e) => {});
 
 // Temp auto click
 const clickInputBtn = new Event("click");
