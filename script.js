@@ -10,17 +10,15 @@ function populateCanvas(e) {
 	e.preventDefault();
 
 	//Stop additional generations
-	if (canvasEle.childElementCount > 0) {
-		return;
-	}
+	if (canvasEle.childElementCount > 0) return;
 
 	let input = e.target.previousElementSibling.value;
 	let totalBlockNum = input * input;
 	let blockWAndHPerc = 1 / input;
 
-	//Create
+	//Populate and append the canvas blocks
 	for (let i = 1; i <= totalBlockNum; i++) {
-		//Add a canvas block
+		//Creates a canvas block
 		let canvasBlockEle = document.createElement("div");
 		canvasBlockEle.className = "canvas-block";
 
@@ -52,6 +50,7 @@ function convertRGB(arg) {
 	}
 }
 
+//Paints the canvas block 10% darker
 function paintBlock(e) {
 	//Check to make sure firing function on a canvas block
 	if (e.target.className !== "canvas-block") return;
@@ -71,7 +70,3 @@ function paintBlock(e) {
 
 sizeInputBtnEle.addEventListener("click", populateCanvas);
 canvasEle.addEventListener("mouseover", paintBlock);
-
-// // Temp auto click
-// const clickInputBtn = new Event("click");
-// sizeInputBtnEle.dispatchEvent(clickInputBtn);
