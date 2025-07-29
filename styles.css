@@ -2,26 +2,20 @@
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
-	font-size: 22px;
+	font-size: 24px;
 	font-family: sans-serif;
-}
-
-.input-section {
-	width: 50%;
-	margin: 0 auto;
-	display: flex;
-	justify-content: center;
+	overflow-x: hidden;
 }
 
 h1.title {
-	margin: 1.5rem auto 1rem;
+	margin: 3vh auto 3vh;
 	text-align: center;
 	font-size: 1.75rem;
 }
 
 .info {
 	text-align: center;
-	margin-bottom: 1rem;
+	margin-bottom: 1vh;
 
 	p,
 	i {
@@ -36,6 +30,15 @@ h1.title {
 		margin-bottom: 0.1rem;
 	}
 }
+
+.input-section {
+	width: 50%;
+	margin: 0 auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
 #canvas-size-input {
 	min-width: 5rem;
 	padding: 0.05rem 0.25rem;
@@ -44,13 +47,16 @@ h1.title {
 #submit-canvas-size {
 	padding: 0.1rem 1rem;
 	margin-left: 0.25rem;
+	min-width: 200px;
 }
 
 #canvas {
-	width: 50vw;
+	width: 70vh;
+	min-width: 450px;
+	max-width: 99vw;
 	height: 70vh;
 	border: 3px solid rgb(107, 107, 107);
-	margin: 0.5rem auto;
+	margin: 3vh auto;
 	display: flex;
 	flex-wrap: wrap;
 	align-content: start;
