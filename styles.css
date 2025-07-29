@@ -43,6 +43,4 @@ h1.title {
 	background-color: rgb(122, 44, 44);
 	border: 1px solid black;
 	flex: 1 1 0;
-	min-width: 50%; /* 1 / blocks per row */
-	min-height: 25%; /* 1 / blocks per column */
 }
