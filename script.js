@@ -1,9 +1,10 @@
 const sizeInputBtnEle = document.getElementById("submit-canvas-size");
 const sizeInputEle = document.getElementById("canvas-size-input");
+sizeInputEle.value = 10;
 const canvasEle = document.createElement("div");
 canvasEle.id = "canvas";
 
-sizeInputBtnEle.addEventListener("click", (e) => {
+function populateCanvas(e) {
 	//Stop submit default function
 	e.preventDefault();
 	let input = e.target.previousElementSibling.value;
@@ -24,4 +25,10 @@ sizeInputBtnEle.addEventListener("click", (e) => {
 	}
 
 	document.body.append(canvasEle);
-});
+}
+
+sizeInputBtnEle.addEventListener("click", populateCanvas);
+
+// Temp auto click
+const clickInputBtn = new Event("click");
+sizeInputBtnEle.dispatchEvent(clickInputBtn);
