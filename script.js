@@ -2,16 +2,28 @@ const sizeInputBtnEle = document.getElementById("submit-canvas-size");
 const sizeInputEle = document.getElementById("canvas-size-input");
 const canvasEle = document.createElement("div");
 canvasEle.id = "canvas";
+const errorTooltipEle = document.getElementById("error-tooltip");
 
 //Populates the canvas equally with blocks
 function populateCanvas(e) {
 	//Stop submit default function
 	e.preventDefault();
+	let input = e.target.previousElementSibling.value;
+
+	//Checks and raises a tooltip if incorrect paramaters entered
+	if (!input || input < 1 || input > 100) {
+		errorTooltipEle.className = "";
+		return;
+	}
+
+	//Removes tooltip on proper entry
+	if (errorTooltipEle.className !== "hidden") {
+		errorTooltipEle.className = "hidden";
+	}
 
 	//Stop additional generations
 	if (canvasEle.childElementCount > 0) return;
 
-	let input = e.target.previousElementSibling.value;
 	let totalBlockNum = input * input;
 	let blockWAndHPerc = 1 / input;
 

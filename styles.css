@@ -40,10 +40,21 @@ h1.title {
 }
 
 #canvas-size-input {
-	min-width: 5rem;
+	min-width: 5.5rem;
 	padding: 0.25rem 0.25rem;
 	font-size: 0.75rem;
 	max-width: 150px;
+}
+
+#error-tooltip {
+	font-size: 0.75rem;
+	color: red;
+	position: relative;
+	left: 1rem;
+}
+
+.hidden {
+	display: none;
 }
 
 #submit-canvas-size {
