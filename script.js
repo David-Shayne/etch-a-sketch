@@ -1,4 +1,4 @@
-const sizeInputBtnEle = document.getElementById("submit-canvas-size");
+const sizeInputBtnEle = document.getElementById("submit-dimensions-btn");
 const sizeInputEle = document.getElementById("canvas-size-input");
 const canvasEle = document.createElement("div");
 canvasEle.id = "canvas";

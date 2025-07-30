@@ -7,20 +7,33 @@
 	overflow-x: hidden;
 }
 
+p,
+i,
+input {
+	font-size: 0.75rem;
+}
+
+button {
+	font-size: 0.85rem;
+	padding: 0.25rem 1rem;
+	border: none;
+	border-radius: 5px;
+}
+
+/* Individual element selection */
+.hidden {
+	display: none;
+}
+
 h1.title {
-	margin: 3vh auto 3vh;
+	margin: 2vh auto 2vh;
 	text-align: center;
 	font-size: 1.75rem;
 }
 
 .info {
 	text-align: center;
-	margin-bottom: 1vh;
-
-	p,
-	i {
-		font-size: 0.75rem;
-	}
+	margin: 2vh auto;
 
 	i {
 		color: #575757;
@@ -33,7 +46,7 @@ h1.title {
 
 .input-section {
 	width: 50%;
-	margin: 0 auto;
+	margin: 1vh auto;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -46,31 +59,33 @@ h1.title {
 	max-width: 150px;
 }
 
-#error-tooltip {
-	font-size: 0.75rem;
-	color: red;
-	position: relative;
-	left: 1rem;
-}
-
-.hidden {
-	display: none;
-}
-
-#submit-canvas-size {
-	font-size: 0.85rem;
-	padding: 0.25rem 1rem;
+#submit-dimensions-btn {
 	margin-left: 0.25rem;
 	min-width: 200px;
-	background-color: rgb(112, 255, 143);
-	border: none;
-	border-radius: 5px;
+	background-color: rgb(24, 102, 41);
+	color: white;
 
 	&:hover,
 	&:focus {
-		background-color: rgb(48, 173, 75);
-		color: white;
+		background-color: rgb(155, 252, 176);
+		color: black;
 	}
+}
+
+#remove-canvas-btn {
+	background-color: maroon;
+	color: white;
+
+	&:hover,
+	&:focus {
+		background-color: rgb(255, 163, 163);
+		color: black;
+	}
+}
+
+#error-tooltip {
+	color: red;
+	text-align: center;
 }
 
 #canvas {
