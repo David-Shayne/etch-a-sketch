@@ -39,7 +39,7 @@ h1.title {
 
 .info {
 	text-align: center;
-	margin: 1.5vh auto;
+	margin: 1.5vh auto 2vh;
 
 	i {
 		color: #575757;
@@ -51,7 +51,7 @@ h1.title {
 }
 
 .input-section {
-	margin: 0 auto 1vh;
+	margin: 0 auto 2vh;
 	display: flex;
 	justify-content: center;
 	align-items: end;
