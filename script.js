@@ -2,12 +2,16 @@ const createCanvasBtnEle = document.getElementById("create-canvas-btn");
 const sizeInputEle = document.getElementById("canvas-size-input");
 const errorTooltipEle = document.getElementById("error-tooltip");
 const removeCanvasBtnEle = document.getElementById("remove-canvas-btn");
+const colorSelectorEle = document.getElementById("color-selector");
 
 //Creates and adds the canvas
 function createCanvas(e) {
 	//Stop submit default function
 	e.preventDefault();
+
+	//Grab initial input values
 	let input = sizeInputEle.value;
+	let backgroundColor = colorSelectorEle.value;
 
 	//Checks and raises a tooltip if incorrect paramaters entered
 	if (!input || input < 1 || input > 100) {
@@ -28,6 +32,7 @@ function createCanvas(e) {
 
 	let canvasEle = document.createElement("div");
 	canvasEle.id = "canvas";
+	canvasEle.style.backgroundColor = backgroundColor;
 
 	//Populate and append the canvas blocks
 	for (let i = 1; i <= totalBlockNum; i++) {
