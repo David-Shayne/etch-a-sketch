@@ -7,7 +7,7 @@ const removeCanvasBtnEle = document.getElementById("remove-canvas-btn");
 function createCanvas(e) {
 	//Stop submit default function
 	e.preventDefault();
-	let input = e.target.previousElementSibling.value;
+	let input = sizeInputEle.value;
 
 	//Checks and raises a tooltip if incorrect paramaters entered
 	if (!input || input < 1 || input > 100) {

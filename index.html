@@ -18,21 +18,28 @@
 				<p>Enter a row and column amount below then click generate</p>
 				<p><i>Hint: hold down shift to pause painting</i></p>
 			</div>
-
-			<div class="input-section">
-				<form action="">
-					<input
-						type="number"
-						id="canvas-size-input"
-						placeholder="No. of rows"
-						min="0"
-						max="100"
-					/>
-					<button id="create-canvas-btn">Create canvas</button>
-					<button id="remove-canvas-btn">Remove canvas</button>
-				</form>
-			</div>
-			<p class="hidden" id="error-tooltip">Please set the number to 1-100</p>
 		</header>
+		<div class="input-section">
+			<div class="color-selector-container">
+				<label for="color-selector">Color:</label> <br />
+				<input type="color" name="color" id="color-selector" />
+			</div>
+			<div class="size-input-container">
+				<label for="canvas-size-input">No. of rows</label> <br />
+				<input
+					type="number"
+					id="canvas-size-input"
+					placeholder="20"
+					min="0"
+					max="100"
+				/>
+			</div>
+
+			<div class="form-btns">
+				<button id="create-canvas-btn">Create canvas</button>
+				<button id="remove-canvas-btn">Remove canvas</button>
+			</div>
+		</div>
+		<p class="hidden" id="error-tooltip">Please set the number to 1-100</p>
 	</body>
 </html>
