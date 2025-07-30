@@ -79,6 +79,7 @@ h1.title {
 	max-width: 99vw;
 	height: 70vh;
 	border: 2px dashed rgb(107, 107, 107);
+	background-color: black;
 	margin: 3vh auto;
 	display: flex;
 	flex-wrap: wrap;
