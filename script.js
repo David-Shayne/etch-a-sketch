@@ -1,11 +1,10 @@
-const sizeInputBtnEle = document.getElementById("submit-dimensions-btn");
+const generateCanvasBtnEle = document.getElementById("submit-dimensions-btn");
 const sizeInputEle = document.getElementById("canvas-size-input");
-const canvasEle = document.createElement("div");
-canvasEle.id = "canvas";
 const errorTooltipEle = document.getElementById("error-tooltip");
+const removeCanvasBtnEle = document.getElementById("remove-canvas-btn");
 
-//Populates the canvas equally with blocks
-function populateCanvas(e) {
+//Creates and adds the canvas
+function createCanvas(e) {
 	//Stop submit default function
 	e.preventDefault();
 	let input = e.target.previousElementSibling.value;
@@ -22,10 +21,13 @@ function populateCanvas(e) {
 	}
 
 	//Stop additional generations
-	if (canvasEle.childElementCount > 0) return;
+	if (document.getElementById("canvas")) return;
 
 	let totalBlockNum = input * input;
 	let blockWAndHPerc = 1 / input;
+
+	let canvasEle = document.createElement("div");
+	canvasEle.id = "canvas";
 
 	//Populate and append the canvas blocks
 	for (let i = 1; i <= totalBlockNum; i++) {
@@ -45,6 +47,7 @@ function populateCanvas(e) {
 	}
 
 	document.body.append(canvasEle);
+	canvasEle.addEventListener("mouseover", paintBlock);
 }
 
 //Paints the canvas block 10% darker
@@ -60,5 +63,16 @@ function paintBlock(e) {
 	}
 }
 
-sizeInputBtnEle.addEventListener("click", populateCanvas);
-canvasEle.addEventListener("mouseover", paintBlock);
+//Deletes and removes the canvas
+function removeCanvas(e) {
+	e.preventDefault();
+
+	let canvasEle = document.getElementById("canvas");
+
+	if (canvasEle) {
+		canvasEle.remove();
+	}
+}
+
+generateCanvasBtnEle.addEventListener("click", createCanvas);
+removeCanvasBtnEle.addEventListener("click", removeCanvas);
