@@ -1,4 +1,4 @@
-const generateCanvasBtnEle = document.getElementById("submit-dimensions-btn");
+const createCanvasBtnEle = document.getElementById("create-canvas-btn");
 const sizeInputEle = document.getElementById("canvas-size-input");
 const errorTooltipEle = document.getElementById("error-tooltip");
 const removeCanvasBtnEle = document.getElementById("remove-canvas-btn");
@@ -74,5 +74,5 @@ function removeCanvas(e) {
 	}
 }
 
-generateCanvasBtnEle.addEventListener("click", createCanvas);
+createCanvasBtnEle.addEventListener("click", createCanvas);
 removeCanvasBtnEle.addEventListener("click", removeCanvas);
